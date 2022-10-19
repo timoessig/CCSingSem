@@ -1,140 +1,155 @@
 \documentclass[a4paper]{article}
 
 \usepackage[backend=bibtex]{biblatex}
-\addbibresource{./sources.bib}
-\usepackage{hyperref}
+\addbibresource{sources.bib}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\D}{\mathrm{d}}
 
 \begin{document}
 
-\section*{Announcement: Seminar on characteristic classes}
+\section{Characteristic classes on singular spaces -- continued}
 
-This is the announcement for the upcoming (online) seminar on 
-\textbf{characteristic classes of manifolds and singular spaces}
-organized by 
-\href{mailto:njunior@icmc.usp.br}{Nivaldo Grulha}, 
-\href{mailto:zach@math.uni-hannover.de}{Matthias Zach} and 
-\href{mailto:essig@math.uni-kiel.de}{Timo Essig}.
+After our introductory talks during the past semester, we would like to 
+continue our seminar on Characteristic classes on singular varieties. 
+The tentative schedule is the following.
 
-\begin{center}
-	\begin{tabular}{rl}
-		Time & Tuesday, 2pm Brazilian time (= 7pm European summer time) \\
-			&  \href{https://uni-kiel.zoom.us/j/69103354611?pwd=TUlmeGZQNlVPSG5YcEtDdndDU1kydz09}{Zoom link} \\
-		Zoom info	& Meeting ID: 691 0335 4611 Passcode: 539478
-	\end{tabular}
-\end{center}
-
-\subsubsection*{Idea of the seminar} 
-Since the participants are scattered all over the world, 
-we plan to have it online. 
-This is a research oriented seminar and some kind of mix of a classical seminar,
-a research discussion and a reading course.
-One session should consist of a concise presentation of the 
-day's topic, lasting approximately half an hour, and then mostly well prepared and 
-guided examples and exercises. Thus, it is the speaker's responsibility to gather 
-and organize the material in such a way that the other participants obtain the 
-possibility to learn the topic ``hands on''. 
-
-\subsubsection*{Organization of the seminar}
-Information will be distributed via the 
-\href{https://github.com/timoessig/CCSingSem/wiki}{Github Wiki}
-created for the seminar. Files like the one you are looking at are saved on that
-repository as well. If you have any questions concerning the wiki or git in general,
-feel free to email Timo.
-
-It would be nice if everyone who is considering participation could send an 
-email to Matthias, in which they briefly describe 
-their particular topics of interest, further suggestions and, if applicable, 
-connections to their own research. 
-%I will then try to extract a coherent 
-%outline with concrete talks and topics from the gathered material. 
-%Also, feel free to approach me via email or BBB/Skype/Jitsi/Zoom if 
-%you have any questions or would like to discuss these matters. 
-
-\subsection*{Overview on the topics of the seminar}
-Disclaimer: To not get lost into too many technical details, we focus on the complex setting
-and mainly work with Chern classes.
-
+\subsection{Part 1: Characteristic classes for singular varieties}
+To start the semester, we want to understand MacPherson's solution of the
+Grothendieck-Deligne conjecture. In particular, we want to get a better 
+feeling of the local Euler obstruction and MacPherson's graph conjecture.
+The talks are more or less organized as follows.
 \begin{enumerate}
-\item \textbf{Introduction} by \emph{M. Zach, T. Essig} on 03/29/2022 \\
-	Examples for applications of characteristic classes on smooth manifolds are the
-	starting point for the seminar. We present some relations to fiber bundle theory 
-	and to bordism theory. Via the Poincar\'e-Hopf-Theorem we get to Grothendieck's 
-	conjecture for the existence of Chern classes on singular spaces.
-	%
-\item \textbf{CCs on manifolds via obstruction theory 1} by \emph{Edmundo Martins} on 04/05/2022
-	%
-\item \textbf{CCs on manifolds via obstruction theory 2} by \emph{Edmundo Martins} on \textbf{04/19}/2022\\
-	In these two talks we learn about the obstruction theory apporach - an algebraic 
-	topology approach to characteristic classes.
-	%
-\item \textbf{CCs on manifolds via differential forms} by \emph{Ivan Tezoto} on \textbf{04/26}/2022 \\
-	An alternative approach to Chern classes on smooth manifolds following Bott-Tu (?)
-	%
-\item \textbf{Functorial approach to CCs on manifolds} by \emph{M. Zach} on 05/03/2022 \\
-	This talk contains a more axiomatic approach to CCs on manifolds, the axioms
-	for them and the question for a general framework that covers the different approaches.
-	We examine the Riemann-Roch-Theorem in its different forms.
+\item \emph{Preliminaries, Nash-blowup, Mather class, local Euler obstruction}
+
+
+    Explain the ``Grothendieck-Deligne conjecture'' and compare it to char. 
+    classes on manifolds. Introduce the Nash blowup and Nash bundle.
+    Define the local Euler obstruction. In the best case,
+    show a good example of a sing. variety embedded in some smooth variety.
+    (E.g. Whitney umbrella) (Mostly 1. -- 4. of \cite{MacPherson74}).
+    Note, that there alternative, algebraic approachs to the local 
+    Euler obstruction by Gonzalez-Sprinberg, \cite{Gonzalez81}, 
+    which is (partly) translated to English by Jiang, \cite{Jiang19}.
+    See also: \cite{Kennedy90}.
+\item Explain the graph construction and how it helps to prove the MacPherson-Chern 
+    class theorem. (Chapters 5. -- 7. of MacPherson).
 \end{enumerate}
-The topics for the other talks are not fully determined yet. After these first talks, we want
-to focus on characteristic classes on singular spaces. We cover MacPherson's solution to 
-the Grothendieck conjecture first and understand his construction of Chern classes using the
-local Euler obstruction (\cite{MacPherson74,Parusinski06}). After that, we examine the Fulton 
-class and the Milnor class, that measures the deviation of the two aforementioned classes.
 
-\subsection*{Unordered collection of ideas and topic5}
-In the following, you can find a rather unordered list of topics that will be or might be
-covered in the seminar. We will pick the interesting and reachable topics during the seminar,
-so we do not chain ourselves to the list.
-\subsubsection*{Characteristic classes of manifolds% (using vector bundles and other approaches)
-}
+To this end, we propose to start with a reading of \cite{MacPherson74} 
+with an emphasis on constructing \textit{explicit examples} for the theory 
+developed. 
+
+\subsection{Part 2: Riemann-Roch type theorems in singularity theory}
+Consider the classical Riemann-Roch theorem for a line bundle $\mathcal L$ 
+on a smooth projective curve $C$:
+\begin{equation}
+  h^0(C, \mathcal L) - h^0(C, \mathcal L^\vee \otimes \omega_C) 
+  = 
+  \deg(\mathcal L) + 1 - g.
+  \label{eqn:RRforCurves}
+\end{equation}
+Using Serre duality, one can rewrite the left hand side as 
+\[
+  h^0(C, \mathcal L) - h^0(C, \mathcal L^\vee \otimes \omega_C) 
+  = h^0(C, \mathcal L) - h^1(C, \mathcal L) = \chi(\mathcal L)
+\]
+the \textit{holomorphic Euler characteristic} of $\mathcal L$. 
+On the right hand side, we find a purely \textit{topological}
+invariant given by the degree
+\[
+  \deg(\mathcal L) = \int_C c_1(\mathcal L) = \int_C \mathrm{Eu}(\mathcal L),
+\]
+which is nothing but the integral over the Euler class, and 
+a correction term given by the \textit{genus} $g$ of the curve. 
+In this spirit, whenever we speak of a ``Riemann-Roch type theorem'', 
+we mean a theorem that does exactly this: Express a topological 
+invariant as a holomorphic Euler characteristic. 
+
+\medskip
+
+\textbf{Where does this occur in Singularity theory?} -- 
+One example is Milnor's formula for an isolated hypersurface singularity
+$f\colon (\mathbb C^{n+1}, 0) \to (\mathbb C, 0)$: 
+\[
+  \mu(f) = \dim_\mathbb C \mathcal O_{n+1}/\mathrm{Jac}(f).
+\]
+The left hand side is the topological obstruction to extending the 
+$1$-form $\D f$ from a small sphere $S_\varepsilon^{2n+1}\subset \mathbb C^{n+1}$
+around the origin as a nowhere vanishing section to its interior. 
+The right hand side can be interpreted as the holomorphic Euler characteristic 
+of the \textit{Koszul-complex} $(\Omega^*_{\mathbb C^{n+1}, 0}, \D f \wedge - )$ 
+induced by the differential of $f$. 
+
+\medskip
+
+\textbf{Why is this interesting?} -- Topological invariants are notoriously 
+hard to compute. For algebraic invariants, such as holomorphic Euler characteristics, 
+we do have a chance using computer algebra systems. Thus, whenever we can express 
+a topological invariant in terms of the latter, we have a chance to actually get 
+our hands on it. As a tentative goal for this seminar I propose that we reach a 
+position in which we can effectively solve the following problem:
+
+\begin{centering}
+  ``Given $f \in \mathbb{Q}[x_0,\dots,x_n]$, compute a Whitney stratification for 
+  the variety $X = V(f)$ and the constructible function $\mathrm Eu$ given by 
+  the local Euler obstruction along the strata. ''
+\end{centering}
+
+As a starting point for the reading we propose \cite{BaumFultonMacPherson79} 
+to first look into the following questions:
 \begin{itemize}
-  \item Introduce the Chern class calculus: What are the axioms. How does it work? 
-    Why is it useful? 
-  \item Present some explicit approaches to Chern classes: Chern-Weyl theory for 
-    smooth de Rham cohomology, algebraic Chern classes taking values in the 
-    duals of Chow groups, Chern classes via topological obstruction theory, 
-    and Chern classes of holomorphic vector bundles taking values in algebraic 
-    de Rham cohomology.
-
-    Can we see examples for these? Can we explain in which sense these theories 
-    are ``all the same'', i.e. can we describe the functoriality? 
-%
-  \item How can other characteristic classes, such as Pontrjagin and $L$-classes be defined?
-	Present the alternative approach to $L$-classes via maps to spheres and explain again,
-	why theses theories are ``the same''.
-  \item What is bordism and surgery, why are these concepts important and what is the relation
-	to characteristic classes?
-%
-  \item $K$-theory: What is the $K$-group $K^0(X)$ of a topological space $X$? 
-    What is the Grothendieck group of coherent sheaves $K_0(X)$? 
-    What can it be used for? Spoiler: These $K$-groups should sit at the top 
-    of all the theory of characteristic classes that were discussed in the 
-    previous paragraph in the sense that all characteristic classes are functors 
-    factoring through these $K$-groups. Can we make these functors explicit? 
-  \item What is a Riemann-Roch-type theorem? 
-  \item What does Motivic integration have to do with this? 
+  \item What is the $K$-group $K^0(X)$ of a topological space $X$? 
+  \item What is the Grothendieck group of coherent sheaves $K^{\mathrm{alg}}_0(X)$? 
+    How is it covariant? How does this relate to the derived category of $X$?
+  \item What is its topological analogue $K^{\mathrm{top}}_0(X)$? 
+  \item How are the Chern characters defined in either theory? Why do the 
+    obvious diagrams commute? 
+  \item How do the classical Riemann-Roch theorems follow from this? 
 \end{itemize}
 
-\subsubsection*{Characteristic classes for singular varieties}
-\begin{itemize}
-  \item What does the ``Grothendieck-Deligne conjecture'' say? Explain this 
-    in explicit examples. 
-  \item Explain the original work of MacPherson \cite{MacPherson74}: 
-    What is the local Euler obstruction and what is it used for? 
-  \item What is a ``characteristic class'' in general? There are others, 
-    such as, for instance, the $L$-class. 
-    How is the $L$-class defined for sing. varieties in contrast to manifolds?
-\end{itemize}
+After this, we turn towards the local theory. Gonzalez-Sprinberg has 
+given an algebraic formula for the local Euler obstruction via an involved 
+blowup procedure \cite{Gonzalez81} that we could start with. 
+I propose to go through the proof and see how things can be rephrased so that 
+one could possibly obtain another algebraic formula without the blowups -- 
+possibly through some projection formula. 
+(Note, that there is a (partial) English translation of the Gonzales-Sprinberg 
+paper by Jiang in \cite{Jiang19}.)
 
-\subsubsection*{Characteristic classes in singularity theory}
-\begin{itemize}
-  \item What is the ``Buchsbaum-Rim multiplicity''? 
-  \item What are the Fulton-Johnson and the Milnor classes?
-  \item What is the Euler obstruction of a $1$-form? 
-\end{itemize}
+As a tentative direction, I would like to go towards algebraic residues
+as described in \cite[Chapter 5]{GriffithsHarris78}. 
+To explain this, recall from \cite{GriffithsHarris78} that the multidimensional 
+residue of a rational $n+1$-form 
+\[
+  \omega = \frac{h(z)\D z_0 \wedge \dots \wedge \D z_n}{f_0 \cdots f_n}
+\]
+for some regular sequence $f_0,\dots,f_n \in \mathcal{O}_{n+1}$ 
+can be transformed into a sphere integral:
+\[
+  \frac{1}{(2\pi \sqrt{-1})^{n+1}}
+  \int_{|f_0| = r_0} \cdots \int_{|f_n| = r_n} \omega
+  =
+  \int_{S_\varepsilon^{2n+1}} \eta_\omega
+\]
+where $\eta_\omega$ is the \textit{dolbeault representative} of $\omega$.
+While the left hand side can be evaluated algebraically, at least 
+for algebraic input, the right hand side has the form of a local 
+topological obstruction: It could arise as the degree of a map of 
+spheres. In fact, this leads to a residue formula for the Milnor 
+number, see \cite{BrasseletLehmannSeadeSuwa99}. 
 
-\subsection*{References} 
-\subsubsection*{Characteristic classes on manifolds}
+In the case where $(X,0) \subset (\mathbb{C}^{n+1}, 0)$ is the affine cone 
+of a projective variety $Y \subset \mathbb{P}^n$, we can in fact 
+compute the local Euler obstruction of $(X,0)$ at the origin 
+via an algebraic residue calculus. 
+The hope is to find 
+an ``easy'' algebraic formula for the local Euler obstruction 
+which extends this result in general. 
+
+
+\subsection{References} 
 \begin{itemize}
   \item \cite{MilnorStasheff74}: Rather broad book on characteristic classes of real and 
     complex vector bundles.
@@ -143,41 +158,17 @@ so we do not chain ourselves to the list.
     cohomology in an elementary way.
   \item \cite{Fulton98}: The reference for Chern classes and intersection theory 
     of algebraic schemes; mostly using Chow groups.
-  \item \cite{Hirzebruch66}: Monograph on the proof of the Riemann-Roch-Theorem.
-  \item \cite{Stong68}: Short (and steep) introduction to CCs in Chapter 5.
+  \item \cite{BaumFultonMacPherson79} and \cite{BaumFultonMacPherson75}: 
+    Discusses Riemann-Roch-type theorems for both algebraic 
+    and topological $K$-theories.
   \item \cite{Atiyah56}: Covers the case of complex analytic vector bundles on 
     projective manifolds using Hodge theory.
-  \item The notes by R. McEnroe (can be found in the folder on GitHub) give a good overview on
-	  Milnor's construction of exotic spheres and the role that characteristic classes have.
+  \item \cite{Banagl07} Book on intersection homology, that includes L-classes for manifolds 
+	and singular spaces and explain, why they are important wrt surgery theory. Tends to
+	be a bit technical, but in particular the part about the motivation in Chapter 5 is good.
+  \item \cite{Maxim19} Another book on intersection homology, focussing on the sheaf theoretic approach.
+	Also covers $L$-classes, but in a bit more streamlined (less detailed and exact way). I recommend it.
 \end{itemize}
-
-\subsubsection*{Characteristic classes on singular spaces}
-The first four references are survey like. All of them have different goals and come from 
-different time frames.
-\begin{itemize}
-  \item \cite{Yokura05} is a survey that is "an appendix to MacPherson's" survey, which
-	  I had a hard time finding in the internet. A newer survey is \cite{Yokura07}.
-  \item \cite{SchuermannYokura07} is a rather general survey with a nice exposition,
-	  which later focusses on motivic CCs. Those are probably beyond the scope of
-	  our seminar.
-  \item \cite{Brasselet00} surveys CCs on manifolds via obstruction theory and Schubert
-	  cycles and the generalizations of these ideas to singular spaces. It is a good
-	  overview and does not cover many technical details.
-  \item \cite{Parusinski06} is a survey on Milnor classes, which also covers the basics on
-	  the MacPherson and Fulton classes. The approach is via characteristic cycles.
-  \item \cite{MacPherson74} is MacPhersons original article on his approach to the Chern
-	  class for singular spaces. He makes use of the local Euler obstruction in the
-	  construction. We will focus on this article in the second part of the seminar.
-  \item \cite{BaumFultonMacPherson79} and \cite{BaumFultonMacPherson75}: 
-    discuss the Fulton class and Riemann-Roch-type theorems for both algebraic 
-    and topological $K$-theories.
-%  \item \cite{Banagl07} Book on intersection homology, that includes L-classes for manifolds 
-%	and singular spaces and explain, why they are important wrt surgery theory. Tends to
-%	be a bit technical, but in particular the part about the motivation in Chapter 5 is good.
-%  \item \cite{Maxim19} Another book on intersection homology, focussing on the sheaf theoretic approach.
-%	Also covers $L$-classes, but in a bit more streamlined (less detailed and exact way). I recommend it.
-\end{itemize}
-
 
 \printbibliography
 
