@@ -6,42 +6,103 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \newcommand{\D}{\mathrm{d}}
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\MODULNAME}{Characteristic classes on singular spaces -- continued}
+\newcommand{\DOZENT}{Dr.~Timo Essig,~Dr.~Matthias Zach}
+\newcommand{\SEMESTER}{Wintersemester 2022/23}
+\newcommand{\BLATTNUMMER}{0}
+\newcommand{\DATUM}{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+\SEMESTER \hfill \DATUM \\
+\DOZENT
 
-\section{Characteristic classes on singular spaces -- continued}
+\bigskip
+
+\begin{center}
+  {\Large\MODULNAME 
+
+  \vspace{1ex}
+  Advertisement for the Seminar}
+\end{center}
+\rule{\textwidth}{1pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 After our introductory talks during the past semester, we would like to 
 continue our seminar on Characteristic classes on singular varieties. 
+To start the semester, we want to understand MacPherson's solution of the
+Grothendieck-Deligne conjecture.
+Afterwards, we move our attention to Riemann-Roch type theorems on singular spaces,
+their connection with characteristic classes and applications in singularity theory.
+Let us emphasize that suggestions for further topics are welcome and will be discussed.
+
 The tentative schedule is the following.
 
-\subsection{Part 1: Characteristic classes for singular varieties}
-To start the semester, we want to understand MacPherson's solution of the
-Grothendieck-Deligne conjecture. In particular, we want to get a better 
-feeling of the local Euler obstruction and MacPherson's graph conjecture.
+\subsection*{Part 1: Characteristic classes for singular varieties}
+We want to get a better feeling of the local Euler obstruction and MacPherson's graph conjecture.
 The talks are more or less organized as follows.
 \begin{enumerate}
-\item \emph{Preliminaries, Nash-blowup, Mather class, local Euler obstruction}
-
+	\item[1st talk] \emph{(Constr. Functions, Nash-blowup, Mather class, local Euler obstruction)}
 
     Explain the ``Grothendieck-Deligne conjecture'' and compare it to char. 
     classes on manifolds. Introduce the Nash blowup and Nash bundle.
     Define the local Euler obstruction. In the best case,
     show a good example of a sing. variety embedded in some smooth variety.
     (E.g. Whitney umbrella) (Mostly 1. -- 4. of \cite{MacPherson74}).
-    Note, that there alternative, algebraic approachs to the local 
-    Euler obstruction by Gonzalez-Sprinberg, \cite{Gonzalez81}, 
-    which is (partly) translated to English by Jiang, \cite{Jiang19}.
-    See also: \cite{Kennedy90}.
-\item Explain the graph construction and how it helps to prove the MacPherson-Chern 
-    class theorem. (Chapters 5. -- 7. of MacPherson).
+   % Note, that there alternative, algebraic approachs to the local 
+   % Euler obstruction by Gonzalez-Sprinberg, \cite{Gonzalez81}, 
+   % which is (partly) translated to English by Jiang, \cite{Jiang19}.
+   % See also: \cite{Kennedy90}.
+\item[2nd talk] \emph{(MacPherson's Graph Construction)}
+
+	Explain the graph construction and how it helps to prove the MacPherson-Chern 
+class theorem. (Chapters 5. -- 7. of \cite{MacPherson74}).
 \end{enumerate}
 
-To this end, we propose to start with a reading of \cite{MacPherson74} 
-with an emphasis on constructing \textit{explicit examples} for the theory 
-developed. 
+\subsection*{Part 2: Riemann-Roch type theorems in singularity theory}
+We continue with the list of talks and outline the motivation afterwards.
+\begin{enumerate}
+\item[3rd talk] \emph{(Gonzalez-Sprinberg)} \\
+    Explain the work in \cite{Gonzalez81} and 
+    how the local Euler obstruction can be computed algebraically using 
+    Chow rings. Introduce the necessary objects and compute at least one 
+    non-trivial concrete example. One might want to look into \cite{Zhang16}. 
+\item[4th talk] \emph{(Classical Riemann-Roch theorems)}  \\
+    Discuss the classical Riemann-Roch 
+    theorem for curves. Assume Serre duality and proof the modified version 
+    with the holomorphic Euler characteristic on the left hand side. 
+    Discuss one example for a divisor on a plane curve or on a family of plane curves in 
+    detail: Compute the cohomology of the associated line bundles, the 
+    degrees, etc. 
+\item[5th talk] \emph{(Riemann-Roch for surfaces and in general)} \\
+    Discuss the Hirzebruch-Riemann-Roch 
+    theorem and how it specializes to its versions for curves and surfaces. 
+    Compute and verify one non-trivial example for a projective surface. 
+\item[6th talk] \emph{(Excursion: $K$-groups and derived categories)} \\
+    Introduce the $K$-groups of 
+    vector bundles and coherent sheaves as needed for \cite{BaumFultonMacPherson79}. 
+    Introduce the higher direct images of a coherent sheaf along a proper map and 
+    explain how $K_0^{\mathrm{alg}}(X)$ becomes a covariant functor. Exhibit at least 
+    one non-trivial example of a proper morphism, say, with projective fibers and 
+    a derived pushforward of a coherent sheaf or a complex of coherent sheaves. 
+  \item[7th talk] \emph{(Riemann-Roch for singular varieties)} \\
+    Go through the paper by Baum, Fulton, and MacPherson \cite{BaumFultonMacPherson79}. 
+\item[8th talk] \emph{(Local Riemann-Roch theorems)}  \\
+    Explain how the Milnor's formula can 
+    be interpreted as a local ``Riemann-Roch-type theorem''. Compute the local 
+    Euler obstruction of the affine cone of a smooth projective variety with 
+    various different methods.
+\end{enumerate}
 
-\subsection{Part 2: Riemann-Roch type theorems in singularity theory}
+\subsubsection*{Background on Part 2}
 Consider the classical Riemann-Roch theorem for a line bundle $\mathcal L$ 
 on a smooth projective curve $C$:
 \begin{equation}
@@ -66,10 +127,9 @@ a correction term given by the \textit{genus} $g$ of the curve.
 In this spirit, whenever we speak of a ``Riemann-Roch type theorem'', 
 we mean a theorem that does exactly this: Express a topological 
 invariant as a holomorphic Euler characteristic. 
-
-\medskip
-
-\textbf{Where does this occur in Singularity theory?} -- 
+%
+%
+\subsubsection*{Where does this occur in Singularity theory?} -- 
 One example is Milnor's formula for an isolated hypersurface singularity
 $f\colon (\mathbb C^{n+1}, 0) \to (\mathbb C, 0)$: 
 \[
@@ -81,10 +141,9 @@ around the origin as a nowhere vanishing section to its interior.
 The right hand side can be interpreted as the holomorphic Euler characteristic 
 of the \textit{Koszul-complex} $(\Omega^*_{\mathbb C^{n+1}, 0}, \D f \wedge - )$ 
 induced by the differential of $f$. 
-
-\medskip
-
-\textbf{Why is this interesting?} -- Topological invariants are notoriously 
+%
+%
+\subsubsection*{Why is this interesting?} -- Topological invariants are notoriously 
 hard to compute. For algebraic invariants, such as holomorphic Euler characteristics, 
 we do have a chance using computer algebra systems. Thus, whenever we can express 
 a topological invariant in terms of the latter, we have a chance to actually get 
@@ -149,26 +208,26 @@ an ``easy'' algebraic formula for the local Euler obstruction
 which extends this result in general. 
 
 
-\subsection{References} 
-\begin{itemize}
-  \item \cite{MilnorStasheff74}: Rather broad book on characteristic classes of real and 
-    complex vector bundles.
-  \item \cite{Husemoeller94}: Touches upon obstruction theory. 
-  \item \cite{BottTu82}: Treats, for instance, Characteristic classes with values in smooth Cech-de-Rham 
-    cohomology in an elementary way.
-  \item \cite{Fulton98}: The reference for Chern classes and intersection theory 
-    of algebraic schemes; mostly using Chow groups.
-  \item \cite{BaumFultonMacPherson79} and \cite{BaumFultonMacPherson75}: 
-    Discusses Riemann-Roch-type theorems for both algebraic 
-    and topological $K$-theories.
-  \item \cite{Atiyah56}: Covers the case of complex analytic vector bundles on 
-    projective manifolds using Hodge theory.
-  \item \cite{Banagl07} Book on intersection homology, that includes L-classes for manifolds 
-	and singular spaces and explain, why they are important wrt surgery theory. Tends to
-	be a bit technical, but in particular the part about the motivation in Chapter 5 is good.
-  \item \cite{Maxim19} Another book on intersection homology, focussing on the sheaf theoretic approach.
-	Also covers $L$-classes, but in a bit more streamlined (less detailed and exact way). I recommend it.
-\end{itemize}
+%\subsection{References} 
+%\begin{itemize}
+%  \item \cite{MilnorStasheff74}: Rather broad book on characteristic classes of real and 
+%    complex vector bundles.
+%  \item \cite{Husemoeller94}: Touches upon obstruction theory. 
+%  \item \cite{BottTu82}: Treats, for instance, Characteristic classes with values in smooth Cech-de-Rham 
+%    cohomology in an elementary way.
+%  \item \cite{Fulton98}: The reference for Chern classes and intersection theory 
+%    of algebraic schemes; mostly using Chow groups.
+%  \item \cite{BaumFultonMacPherson79} and \cite{BaumFultonMacPherson75}: 
+%    Discusses Riemann-Roch-type theorems for both algebraic 
+%    and topological $K$-theories.
+%  \item \cite{Atiyah56}: Covers the case of complex analytic vector bundles on 
+%    projective manifolds using Hodge theory.
+%  \item \cite{Banagl07} Book on intersection homology, that includes L-classes for manifolds 
+%	and singular spaces and explain, why they are important wrt surgery theory. Tends to
+%	be a bit technical, but in particular the part about the motivation in Chapter 5 is good.
+%  \item \cite{Maxim19} Another book on intersection homology, focussing on the sheaf theoretic approach.
+%	Also covers $L$-classes, but in a bit more streamlined (less detailed and exact way). I recommend it.
+%\end{itemize}
 
 \printbibliography
 
